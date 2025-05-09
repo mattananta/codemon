@@ -10,6 +10,9 @@ module.exports = defineConfig([
   {
     rules: {
       'react/display-name': 'off',
+      eqeqeq: "off",
+			"no-unused-vars": "error",
+			"prefer-const": ["error", { ignoreReadBeforeAssign: true }],
     },
   },
 ]);

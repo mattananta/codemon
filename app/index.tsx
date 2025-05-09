@@ -13,6 +13,9 @@ export default function Home() {
         <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
           <Button title="Show Details" />
         </Link>
+        <Link href={{ pathname: '/login'}} asChild>
+          <Button title="Login" />
+        </Link>
       </Container>
     </>
   );

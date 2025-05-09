@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth'
 
 // Optionally import the services that you want to use
 // import {...} from "firebase/auth";
@@ -9,18 +10,20 @@ import { initializeApp } from 'firebase/app';
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.EXPO_PUBLIC_FIREBASE_DATABASE_URL,
-  projectId: process.env.EXPO_PUBLIC_PROJECT_ID,
-  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyCosLu3Eok8f5Z3oMKoh3M6aQb93JAyoIU",
+  authDomain: "codemon-fffca.firebaseapp.com",
+  databaseURL: "https://codemon-fffca-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "codemon-fffca",
+  storageBucket: "codemon-fffca.firebasestorage.app",
+  messagingSenderId: "576584644568",
+  appId: "1:576584644568:web:b070fa29b7347b09c2e4ad",
+  measurementId: "G-K7DYR92SY6"
 };
 
-const firebase = initializeApp(firebaseConfig);
 // For more information on how to access Firebase in your project,
 // see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
 
-export default firebase;
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export default app;
